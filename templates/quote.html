@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}Quote{% endblock %}
+
+{% block main %}
+    <form action={{"http.iextrading.com/quote"}} method="post">
+        <div class="form-group" >
+            <input autocomplete="off" autofocus class="form-control"
+                   name="symbol" placeholder="symbol" type="text"/>
+            <button class="btn btn-primary" type="submit"></button>
+        </div>
+    </form>
+{% endblock %}
